@@ -30,7 +30,7 @@ UI & Docker versions are a long-term vision, for the most part these projects wi
  
 ## Lanaguages Completed:
 - [ ] Java (Done but not in Repo)
-- [ ] Visual Basic (Done but not in Repo, i'd be lucky to find this again)
+- [X] Visual Basic (Completed in college, Code is not up to standard. Not Tested. Good platform to look into upgrading at some point later)
 - [ ] Haskell
 - [ ] Rust
 - [ ] Kotlin
