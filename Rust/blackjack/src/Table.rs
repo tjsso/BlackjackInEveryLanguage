@@ -1,19 +1,19 @@
-mod deck {
+pub(crate) mod deck {
     use std::collections::VecDeque;
 
     struct Card { name: String, number: i8 }
-    struct Deck { cards: VecDeque<Card> }
+    pub(crate) struct Deck { cards: VecDeque<Card> }
 
-    fn build(how_many_decks: i8) -> Deck {
-        let suits: [&str; 4] = ["Spades", "Clubs", "Hearts", "Diamonds"];
+   pub(crate) fn build(how_many_decks: i8) -> Deck {
+       let suits: [&str; 4] = ["Spades", "Clubs", "Hearts", "Diamonds"];
 
         let mut deck_of_cards: VecDeque<Card> = Default::default();
-
-        for suit in suits {
-            // TODO for each "how_many_decks" but where?
-            for n in 1..14 {
-                let card = Card { name: format!("{0} of {1}",translate_name(n), suit), number: n  };
-                deck_of_cards.push_front(card);
+        for deck in 0..how_many_decks {
+            for suit in suits {
+                for n in 1..15 {
+                    let card = Card { name: format!("{0} of {1}", translate_name(n), suit), number: n };
+                    deck_of_cards.push_front(card);
+                }
             }
         }
 

@@ -1,7 +1,6 @@
-mod Player;
-mod Table;
+mod player;
+mod table;
 
 fn main() {
-    println!("Hello, world!");
-    todo!("finish this");
+
 }

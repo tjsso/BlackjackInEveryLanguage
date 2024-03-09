@@ -12,18 +12,18 @@ UI & Docker versions are a long-term vision, for the most part these projects wi
   - [ ] Stand 
 - [ ] Use inheritance to create a Player > Dealer:
   - [ ] Deal
+  - [ ] shuffles deck
 - [ ] create a Player > Gambler:
   - [ ] Bet
   - [ ] Balance
 - [ ] Model table:
   - [ ] has a deck of cards (or multiple)
-  - [ ] shuffles deck
   - [ ] runs game?
 ### Optional upgrades:
 - [ ] Create database (any framework/DB)
   - [ ] Save games?
   - [ ] player login's/tracking
-  - [ ] any other gameplay imporvements from DB?
+  - [ ] any other gameplay improvements from DB?
 - [ ] Create web server
   - [ ] create REST endpoints to allow playing of game via browser console
 - [ ] Dockerise
