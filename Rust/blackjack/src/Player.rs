@@ -11,8 +11,6 @@ mod player {
     }
 
     pub mod dealer {
-        use crate::table::deck;
-        use crate::table::deck::Deck;
 
         fn deal() {
         }

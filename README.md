@@ -6,18 +6,18 @@ I am traditionally a back-end developer and so focus on backend languages for th
 UI & Docker versions are a long-term vision, for the most part these projects will be CLI only or built in UI only.
 
 ## Checklist:
-- [ ] Model a deck of cards (Array[], List, Map, etc)
+- [ ] Model a Deck of cards (Array[], List, Map, etc)
 - [ ] Create a model of a Player, who can:
   - [ ] Hit
   - [ ] Stand 
 - [ ] Use inheritance to create a Player > Dealer:
   - [ ] Deal
-  - [ ] shuffles deck
+  - [ ] shuffles Deck
 - [ ] create a Player > Gambler:
   - [ ] Bet
   - [ ] Balance
 - [ ] Model table:
-  - [ ] has a deck of cards (or multiple)
+  - [ ] has a Deck of cards (or multiple)
   - [ ] runs game?
 ### Optional upgrades:
 - [ ] Create database (any framework/DB)

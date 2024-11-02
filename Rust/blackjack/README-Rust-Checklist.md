@@ -1,17 +1,19 @@
 
 ## Checklist:
-- [x] Model a deck of cards (Array[], List, Map, etc)
+- [x] Model a Deck of cards (Array[], List, Map, etc)
 - [ ] Create a model of a Player, who can:
   - [ ] Hit
-  - [ ] Stand 
+  - [ ] Stand
+
+[//]: <> "Rust does not have inheritance the same as other OOPs"
 - [x] Use inheritance to create a Player > Dealer:
   - [ ] Deal
-  - [ ] shuffles deck
+  - [X] shuffles Deck
 - [ ] create a Player > Gambler:
   - [ ] Bet
   - [ ] Balance
 - [ ] Model table:
-  - [X] has a deck of cards (or multiple)
+  - [X] has a Deck of cards (or multiple)
   - [ ] runs game?
 
 ### Optional upgrades:
