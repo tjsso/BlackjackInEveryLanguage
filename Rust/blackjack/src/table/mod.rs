@@ -1,10 +1,11 @@
 mod test;
 
 pub(crate) mod deck {
+    use std::cmp::min;
     use rand::seq::SliceRandom;
 
     #[derive(Debug, Clone)]
-    pub(crate) struct Card { pub(crate) name: String, number: u8 }
+    pub(crate) struct Card { pub(crate) name: String, pub(crate) number: u8 }
     pub(crate) struct Deck {
         pub(crate) cards: Vec<Card>
     }
@@ -31,7 +32,7 @@ pub(crate) mod deck {
             while how_many_decks > 0 {
                 for suit in suits {
                     for n in 1..14 {
-                        let card = Card { name: format!("{0} of {1}", translate_name(n), suit), number: n as u8 };
+                        let card = Card { name: format!("{0} of {1}", translate_name(n), suit), number: min(n, 10) as u8 };
                         deck_of_cards.push(card);
                     }
                 }
@@ -44,8 +45,13 @@ pub(crate) mod deck {
             Deck { cards: deck_of_cards }
         }
 
+        #[allow(unused)]
         pub(crate) fn shuffle_deck(&mut self)  {
             self.cards.shuffle(&mut rand::thread_rng())
+        }
+        
+        pub(crate) fn deal_card(&mut self) -> Card {
+            self.cards.pop().unwrap()
         }
     }
 

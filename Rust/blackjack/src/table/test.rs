@@ -1,16 +1,16 @@
-use crate::table::deck::{Deck};
+#[allow(unused_imports)]
+use crate::table::deck::Deck;
+
 #[cfg(test)]
 
 #[test]
 fn test_building_a_deck() {
-    let mut deck = Deck::new(1);
-    // TODO: Should this be mutable?
+    let deck = Deck::new(1);
     assert!(!deck.cards.is_empty());
     assert_eq!(deck.cards.len(), 52);
 
-    //TODO should we pop()? for test probably ok but for actual use case?
-    let first_card = deck.cards.pop().unwrap();
-    let second_card = deck.cards.pop().unwrap();
+    let first_card = deck.cards.first().unwrap();
+    let second_card = deck.cards.get(1).unwrap();
 
     // Test randomizing/shuffling of decks
     if first_card.name == "Ace of Spades" {
@@ -25,9 +25,9 @@ fn test_building_a_deck() {
 #[test]
 fn test_shuffle_deck() {
     let mut deck = Deck::new(1);
-    let first_card = deck.cards.get(0).cloned().unwrap();
+    let first_card = deck.cards.get(0).unwrap().clone();
     deck.shuffle_deck();
-    let shuffled_first_card = deck.cards.get(0).cloned().unwrap();
+    let shuffled_first_card = deck.cards.get(0).unwrap().clone();
 
     assert_ne!(first_card, shuffled_first_card)
 }
