@@ -1,20 +1,27 @@
 
 ## Checklist:
 - [x] Model a Deck of cards (Array[], List, Map, etc)
-- [ ] Create a model of a Player, who can:
-  - [ ] Hit
-  - [ ] Stand
+- [X] Create a model of a Player, who can:
+  - [X] Hit
+  - [X] Stand
 
 [//]: <> "Rust does not have inheritance the same as other OOPs"
 - [x] Use inheritance to create a Player > Dealer:
-  - [ ] Deal
+  - [X] Deal
   - [X] shuffles Deck
-- [ ] create a Player > Gambler:
-  - [ ] Bet
-  - [ ] Balance
-- [ ] Model table:
+- [X] create a Player > Gambler:
+  - [X] Bet
+  - [X] Balance
+- [X] Model table:
   - [X] has a Deck of cards (or multiple)
-  - [ ] runs game?
+  - [X] runs game?
+
+- [ ] Nicely formats output :
+  - [ ] Clears terminal when appropriate
+  - [ ] Implement better text based UI with live update.
+[//]: <> "Possibly not for Rust" 
+  - [ ] Basic graphic UI
+        
 
 ### Optional upgrades:
 - [ ] Create database (any framework/DB)
@@ -24,4 +31,6 @@
 - [ ] Create web server
   - [ ] create REST endpoints to allow playing of game via browser console
 - [ ] Dockerise
+- [ ] Create NPC limit
+  - [ ] NPC Logic 
 
