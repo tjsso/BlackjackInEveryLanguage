@@ -41,6 +41,7 @@ fn main() {
 
         let mut player_input = String::new();
         player_hand_total = calculate_hand(&player.hand);
+        money_pot = 0;
         while player_input.to_lowercase().trim() != "stand" {
             player_input.clear();
             //TODO can player bet every turn? good for now, check with rules and adjust accordingly
@@ -78,7 +79,7 @@ fn main() {
         }
         
         let mut dealer_hand_total = calculate_hand(&dealer.hand);
-        if player_hand_total <= 21 && dealer_hand_total >= player_hand_total {
+        if player_hand_total > 21 || dealer_hand_total >= player_hand_total {
             println!("Dealer has cards {}. \nThis totals to {} vs your {}. Player BUSTS, Dealer wins.",
                 dealer.hand.iter().map(|card| card.name.clone()).collect::<Vec<_>>().join(", "), 
                 dealer_hand_total, 
@@ -117,8 +118,6 @@ fn main() {
         }
         
         //reset game
-        // player_hand_total = 0;
-        // dealer_hand_total = 0;
         player.hand = Vec::new();
         dealer.hand = Vec::new();
     } // end of game loop
